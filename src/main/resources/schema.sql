@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS users (
+    id BINARY(16) PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(120) NOT NULL UNIQUE,
+    password_hash VARCHAR(200) NOT NULL,
+    roles VARCHAR(300) NOT NULL,
+    created_at TIMESTAMP NOT NULL
+);
