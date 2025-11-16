@@ -1,3 +1,6 @@
+
+// Clase de configuración de Spring para definir los beans de la aplicación.
+// Permite la inyección de dependencias y la gestión de instancias de los casos de uso y servicios.
 package udec.actividad2.crudhexagonal.infrastructure.config;
 
 import org.springframework.context.annotation.Bean;
@@ -12,11 +15,13 @@ public class AppConfig {
 
     @Bean
     public UserDomainService userDomainService(UserRepository userRepository) {
+            // Bean para el servicio de dominio de usuarios.
         return new UserDomainService(userRepository);
     }
 
     @Bean
     public CreateUserUseCase createUserUseCase(UserRepository repo, UserDomainService ds) {
+            // Bean para el caso de uso de creación de usuario.
         return new CreateUserUseCase(repo, ds);
     }
 
@@ -35,6 +40,7 @@ public class AppConfig {
     // Bean de AuthenticateUserUseCase eliminado
     @Bean
     public AuthenticateUserUseCase authenticateUserUseCase(UserRepository repo) {
+            // Bean para el caso de uso de autenticación de usuario.
         return new AuthenticateUserUseCase(repo);
     }
 }

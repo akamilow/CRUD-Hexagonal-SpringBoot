@@ -2,7 +2,7 @@
 
 
 ## Descripción
-API CRUD de usuarios con arquitectura hexagonal/DDD. Sin autenticación ni roles. Base de datos embebida H2.
+API CRUD de usuarios con arquitectura hexagonal/DDD. Sin autenticación ni roles, pero se deja las bases para seguir desarrollo. Base de datos SQLite embebida H2.
 
 
 ## Endpoints principales
